@@ -58,8 +58,8 @@
 
     <menuitem id="menu_jira_settings_view_form" 
         name="View Jira Settings" 
-        parent="base.menu_configuration" 
-        sequence="10" 
+        parent="project.menu_project_config" 
+        sequence="11" 
         action="jira_settings.action_jira_settings_view_form"
         groups="base.group_user"/>
 

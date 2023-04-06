@@ -14,12 +14,9 @@
         'views/jira_settings.xml',
         'security/ir.model.access.csv',
     ],
-    'test': [
-        'tests/*',
-    ],
     'installable': True,
     'auto_install': False,
     'custom_tags': {
-        'test': ['+views/jira_settings.xml', 'tests/*' ],
+        'test': ['+views/jira_settings.xml', '+tests/*' ],
     },
 }

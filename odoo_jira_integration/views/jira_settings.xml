@@ -27,7 +27,7 @@
         <!-- Menu item for Jira Settings -->
     <menuitem id="menu_jira_settings"
         name="Jira Settings"
-        parent="project_configuration"
+        parent="menu_project_config"
         sequence="10"
         action="action_jira_settings"
         groups="base.group_user"/>

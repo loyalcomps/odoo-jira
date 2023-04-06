@@ -8,9 +8,11 @@ class JiraSettings(models.TransientModel):
     _name = 'jira.settings'
     _description = 'Jira Settings'
 
-    jira_url = fields.Char(string='Jira URL')
-    jira_user = fields.Char(string='Jira Username')
-    jira_api_key = fields.Char(string='Jira API Key')
+
+    jira_url = fields.Char(string='Jira URL', required=True, help='Example: https://jira.example.com')
+    jira_user = fields.Char(string='Jira User', required=True, help='Example: jirauser')
+    jira_api_key = fields.Char(string='Jira API Key', required=True, help='Example: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
+
 
     @api.model
     def get_settings(self):
@@ -53,5 +55,17 @@ class JiraSettings(models.TransientModel):
         else:
             # Connection failed
             self.message = "Connection failed: " + response.reason
+
+
+    def action_back(self):
+        return {
+            'type': 'ir.actions.act_window',
+            'res_model': 'jira.settings',
+            'view_mode': 'form',
+            'view_type': 'form',
+            'res_id': self.id,
+            'target': 'new',
+        }
+
 
 

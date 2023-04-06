@@ -12,7 +12,6 @@
     'depends': ['base', 'project'],
     'data': [
         'views/jira_settings.xml',
-        'views/jira_settings_menu.xml',
         'security/ir.model.access.csv',
     ],
     'test': {

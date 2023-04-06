@@ -38,7 +38,7 @@
         name="Jira Settings"
         parent="project.menu_project_config"
         sequence="10"
-        action="action_jira_settings_form"
+        action="action_jira_settings"
         groups="base.group_user"/>
 
 </odoo>

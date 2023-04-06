@@ -48,6 +48,15 @@
       <field name="view_id" ref="jira_settings_form"/>
       <field name="target">new</field>
     </record>
+            <!-- Jira Settings View Action -->
+    <record id="action_jira_settings_view_form" model="ir.actions.act_window">
+      <field name="name">View Jira Settings</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">jira.settings</field>
+      <field name="view_mode">form</field>
+      <field name="view_id" ref="jira_settings_view_form"/>
+      <field name="target">new</field>
+    </record>
         <!-- Menu item for Jira Settings -->
     <menuitem id="menu_jira_settings"
         name="Jira Settings"
@@ -60,7 +69,7 @@
         name="View Jira Settings" 
         parent="project.menu_project_config" 
         sequence="11" 
-        action="jira_settings.jira_settings_view_form"
+        action="jira_settings.action_jira_settings_view_form"
         groups="base.group_user"/>
 
 

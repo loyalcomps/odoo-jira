@@ -7,7 +7,7 @@
                 <group>
                     <field name="jira_url" required="1"/>
                     <field name="jira_user" required="1"/>
-                    <field name="jira_password" widget="password" required="1"/>
+                    <field name="jira_api_token" widget="password" required="1"/>
                 </group>
                 <button name="check_connection" string="Check Connection" type="object" class="oe_highlight"/>
             </form>

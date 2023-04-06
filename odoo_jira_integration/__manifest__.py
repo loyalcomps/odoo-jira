@@ -15,7 +15,7 @@
         'security/ir.model.access.csv',
     ],
     'test': [
-        'tests/test_jira_settings.py',
+        'tests/*',
     ],
     'installable': True,
     'auto_install': False,

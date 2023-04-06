@@ -21,3 +21,11 @@ class JiraSettingsController(http.Controller):
 
         # Return a response with the message
         return request.render('odoo_jira_integration.jira_settings_message', {'message': message})
+    
+    @http.route('/jira/settings/view', type='http', auth='user', website=True)
+    def view_jira_settings(self, **kwargs):
+        jira_settings = request.env['jira.settings'].view_saved_jira_settings()
+        return request.render('odoo_jira_integration.jira_settings_view_form', {
+            'jira_settings': jira_settings,
+        })
+

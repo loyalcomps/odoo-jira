@@ -32,7 +32,7 @@
             <form>
                 <group>
                     <field name="jira_url" readonly="1"/>
-                    <field name="jira_username" readonly="1"/>
+                    <field name="jira_user" readonly="1"/>
                     <field name="jira_api_key" readonly="1"/>
                 </group>
             </form>

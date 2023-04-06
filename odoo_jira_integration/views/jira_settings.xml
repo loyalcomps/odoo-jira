@@ -1,35 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?>
-<odoo>
-    <data>
+<record model="ir.ui.view" id="jira_settings_form">
+    <field name="name">jira.settings.form</field>
+    <field name="model">jira.settings</field>
+    <field name="arch" type="xml">
+        <form string="Jira Settings">
+            <group>
+                <field name="jira_url" required="1"/>
+                <field name="jira_user" required="1"/>
+                <field name="jira_password" widget="password" required="1"/>
+            </group>
+            <button name="check_connection" string="Check Connection" type="object" class="oe_highlight"/>
+        </form>
+    </field>
+</record>
 
-        <record id="view_jira_settings_form" model="ir.ui.view">
-            <field name="name">Jira Settings Form</field>
-            <field name="model">jira.settings</field>
-            <field name="type">form</field>
-            <field name="arch" type="xml">
-                <form string="Jira Settings">
-                    <sheet>
-                        <group>
-                            <field name="url"/>
-                            <field name="username"/>
-                            <field name="api_token"/>
-                        </group>
-                    </sheet>
-                    <footer>
-                        <button name="save" string="Save" type="object" class="btn-primary"/>
-                    </footer>
-                </form>
-            </field>
-        </record>
-
-        <record id="action_jira_settings" model="ir.actions.act_window">
-            <field name="name">Jira Settings</field>
-            <field name="res_model">jira.settings</field>
-            <field name="view_mode">form</field>
-            <field name="view_type">form</field>
-            <field name="target">new</field>
-            <field name="type">ir.actions.act_window</field>
-        </record>
-
-    </data>
-</odoo>
+<record model="ir.ui.view" id="jira_settings_message">
+    <field name="name">jira.settings.message</field>
+    <field name="model">jira.settings</field>
+    <field name="arch" type="xml">
+        <form string="Jira Settings">
+            <h1 t-esc="message"/>
+            <button name="action_back" string="Back" type="object" class="oe_highlight"/>
+        </form>
+    </field>
+</record>

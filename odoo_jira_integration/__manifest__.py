@@ -11,7 +11,7 @@
     'company': 'Loyal IT Solutions Pvt Ltd',
     'depends': ['base', 'project'],
     'data': [
-        'views/my_view.xml',
+        'views/jira_settings.xml',
     ],
     'installable': True,
     'auto_install': False,

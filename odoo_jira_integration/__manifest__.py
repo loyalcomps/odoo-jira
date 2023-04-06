@@ -13,6 +13,7 @@
     'data': [
         'views/jira_settings.xml',
         'security/ir.model.access.csv',
+        'tests/test_jira_settings.py',
     ],
     'installable': True,
     'auto_install': False,

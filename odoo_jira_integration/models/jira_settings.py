@@ -10,7 +10,7 @@ class JiraSettings(models.TransientModel):
 
     jira_url = fields.Char(string='Jira URL')
     jira_user = fields.Char(string='Jira Username')
-    jira_api_token = fields.Char(string='Jira API Token')
+    jira_api_key = fields.Char(string='Jira API Key')
 
     @api.model
     def get_settings(self):
@@ -21,12 +21,12 @@ class JiraSettings(models.TransientModel):
             return self.create({})
 
     @api.model
-    def set_settings(self, url, username, api_token):
+    def set_settings(self, url, username, api_key):
         settings = self.get_settings()
         settings.write({
-            'url': url,
-            'username': username,
-            'api_token': api_token,
+            'jira_url': url,
+            'jira_user': username,
+            'jira_api_key': api_key,
         })
 
     @api.env
@@ -54,3 +54,5 @@ class JiraSettings(models.TransientModel):
         else:
             # Connection failed
             self.message = "Connection failed: " + response.reason
+
+

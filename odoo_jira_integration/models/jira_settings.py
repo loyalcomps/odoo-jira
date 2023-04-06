@@ -12,6 +12,7 @@ class JiraSettings(models.TransientModel):
     jira_url = fields.Char(string='Jira URL', required=True, help='Example: https://jira.example.com')
     jira_user = fields.Char(string='Jira User', required=True, help='Example: jirauser')
     jira_api_key = fields.Char(string='Jira API Key', required=True, help='Example: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
+    message = fields.Char(string='Message')
 
 
     @api.model

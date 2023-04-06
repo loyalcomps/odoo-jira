@@ -1,25 +1,27 @@
-<record model="ir.ui.view" id="jira_settings_form">
-    <field name="name">jira.settings.form</field>
-    <field name="model">jira.settings</field>
-    <field name="arch" type="xml">
-        <form string="Jira Settings">
-            <group>
-                <field name="jira_url" required="1"/>
-                <field name="jira_user" required="1"/>
-                <field name="jira_password" widget="password" required="1"/>
-            </group>
-            <button name="check_connection" string="Check Connection" type="object" class="oe_highlight"/>
-        </form>
-    </field>
-</record>
+<odoo>
+    <record model="ir.ui.view" id="jira_settings_form">
+        <field name="name">jira.settings.form</field>
+        <field name="model">jira.settings</field>
+        <field name="arch" type="xml">
+            <form string="Jira Settings">
+                <group>
+                    <field name="jira_url" required="1"/>
+                    <field name="jira_user" required="1"/>
+                    <field name="jira_password" widget="password" required="1"/>
+                </group>
+                <button name="check_connection" string="Check Connection" type="object" class="oe_highlight"/>
+            </form>
+        </field>
+    </record>
 
-<record model="ir.ui.view" id="jira_settings_message">
-    <field name="name">jira.settings.message</field>
-    <field name="model">jira.settings</field>
-    <field name="arch" type="xml">
-        <form string="Jira Settings">
-            <h1 t-esc="message"/>
-            <button name="action_back" string="Back" type="object" class="oe_highlight"/>
-        </form>
-    </field>
-</record>
+    <record model="ir.ui.view" id="jira_settings_message">
+        <field name="name">jira.settings.message</field>
+        <field name="model">jira.settings</field>
+        <field name="arch" type="xml">
+            <form string="Jira Settings">
+                <h1 t-esc="message"/>
+                <button name="action_back" string="Back" type="object" class="oe_highlight"/>
+            </form>
+        </field>
+    </record>
+</odoo>

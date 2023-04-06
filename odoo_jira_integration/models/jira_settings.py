@@ -29,7 +29,7 @@ class JiraSettings(models.TransientModel):
             'api_token': api_token,
         })
 
-    @api.multi
+    @api.env
     def check_connection(self):
         # Get the Jira URL, username, and API key from the current settings record
         jira_url = self.jira_url

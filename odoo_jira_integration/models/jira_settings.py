@@ -67,6 +67,18 @@ class JiraSettings(models.TransientModel):
             'res_id': self.id,
             'target': 'new',
         }
+    
+    @api.model
+    def view_saved_jira_settings(self):
+        jira_settings = self.env['jira.settings'].search([], limit=1)
+        if jira_settings:
+            return {
+                'jira_url': jira_settings.jira_url,
+                'jira_username': jira_settings.jira_username,
+                'jira_api_key': jira_settings.jira_api_key,
+            }
+        return {}
+
 
 
 

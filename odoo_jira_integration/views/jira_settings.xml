@@ -24,6 +24,21 @@
             </form>
         </field>
     </record>
+    <record id="jira_settings_view_form" model="ir.ui.view">
+        <field name="name">jira.settings.view.form</field>
+        <field name="model">jira.settings</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="jira_url" readonly="1"/>
+                    <field name="jira_username" readonly="1"/>
+                    <field name="jira_api_key" readonly="1"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
         <!-- Jira Settings Action -->
     <record id="action_jira_settings" model="ir.actions.act_window">
       <field name="name">Jira Settings</field>
@@ -40,5 +55,13 @@
         sequence="10"
         action="action_jira_settings"
         groups="base.group_user"/>
+
+    <menuitem id="menu_jira_settings_view_form" 
+        name="View Jira Settings" 
+        parent="base.menu_configuration" 
+        sequence="10" 
+        action="jira_settings.action_jira_settings_view_form"
+        groups="base.group_user"/>
+
 
 </odoo>

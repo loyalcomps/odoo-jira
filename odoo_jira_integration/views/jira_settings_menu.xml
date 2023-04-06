@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="menu_project_jira" name="Jira Integration" parent="project.menu_main_project"
+            sequence="25" web_icon="jira_jpg">
+            <action name="%(model_jira_settings)d.action_jira_settings" string="Jira Settings"/>
+        </menuitem>
+    </data>
+</odoo>

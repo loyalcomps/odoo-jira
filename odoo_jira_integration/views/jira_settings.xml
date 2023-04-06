@@ -29,7 +29,7 @@
         name="Jira Settings"
         parent="project.menu_project_config"
         sequence="10"
-        action="action_jira_settings"
+        action="jira_settings_form"
         groups="base.group_user"/>
 
 </odoo>

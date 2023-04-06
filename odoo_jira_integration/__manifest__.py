@@ -12,6 +12,7 @@
     'depends': ['base', 'project'],
     'data': [
         'views/jira_settings.xml',
+        'security/ir.model.access.csv',
     ],
     'installable': True,
     'auto_install': False,

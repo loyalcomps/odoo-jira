@@ -20,6 +20,6 @@
     'installable': True,
     'auto_install': False,
     'custom_tags': {
-        'test': ['+views/jira_settings.xml'],
+        'test': ['+views/jira_settings.xml', 'tests/*' ],
     },
 }

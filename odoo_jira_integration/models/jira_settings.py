@@ -74,7 +74,7 @@ class JiraSettings(models.TransientModel):
         if jira_settings:
             return {
                 'jira_url': jira_settings.jira_url,
-                'jira_username': jira_settings.jira_username,
+                'jira_user': jira_settings.jira_user,
                 'jira_api_key': jira_settings.jira_api_key,
             }
         return {}

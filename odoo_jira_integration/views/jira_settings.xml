@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_jira_settings_form" model="ir.ui.view">
+        <field name="name">Jira Settings</field>
+        <field name="model">jira.settings</field>
+        <field name="arch" type="xml">
+        <form string="Jira Settings">
+            <sheet>
+                <group>
+                    <field name="jira_url"/>
+                    <field name="jira_user"/>
+                    <field name="jira_api_key"/>
+                </group>
+                <group>
+                    <field name="message" read_only="1"/>
+                </group>
+                <button name="test_connection" string="Test Connection" type="object" class="oe_highlight"/>
+            </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_jira_settings_tree" model="ir.ui.view">
+        <field name="name">Jira Settings</field>
+        <field name="model">jira.settings</field>
+        <field name="arch" type="xml">
+        <tree string="Jira Settings">
+            <field name="jira_url"/>
+            <field name="jira_user"/>
+            <field name="jira_api_key"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_jira_settings" model="ir.actions.act_window">
+        <field name="name">Jira Settings</field>
+        <field name="res_model">jira.settings</field>
+        <field name="view_mode">form,tree</field>
+        <field name="target">current</field>
+    </record>
+    <menuitem 
+        id="menu_jira_settings" 
+        name="Jira Settings" 
+        action="action_jira_settings"
+        groups="base.group_user"
+        parent="project.menu_project_config"
+        sequence="10"/>
+</odoo>

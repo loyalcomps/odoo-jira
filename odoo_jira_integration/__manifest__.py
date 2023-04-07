@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Odoo Jira Integration',
-    'version': '1.0',
+    'version': '1.0.0',
     'category': 'Tools',
     'summary': 'Integrate Odoo and Jira for better project management',
     'description': """
@@ -9,6 +9,10 @@
         """,
     'author': 'Shamnas Koyani',
     'company': 'Loyal IT Solutions Pvt Ltd',
+    'website': 'https://www.loyalitsolutions.com',
+    'license': 'AGPL-3',
+    'application': True,
+    'sequence': -100,
     'depends': ['base', 'project'],
     'data': [
         'views/jira_settings.xml',

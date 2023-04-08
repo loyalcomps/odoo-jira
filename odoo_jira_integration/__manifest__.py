@@ -15,7 +15,7 @@
     'sequence': -100,
     'depends': ['base', 'project'],
     'data': [
-        'views/jira_settings.xml',
+        'views/jira_settings_view.xml',
         'security/ir.model.access.csv',
     ],
     'test': {

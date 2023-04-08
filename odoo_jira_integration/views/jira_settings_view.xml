@@ -1,0 +1,55 @@
+<odoo>
+  <data>
+
+    <!-- JiraSettings tree view -->
+    <record id="jira_settings_tree_view" model="ir.ui.view">
+      <field name="name">jira.settings.tree</field>
+      <field name="model">jira.settings</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="jira_url"/>
+          <field name="jira_user"/>
+          <field name="jira_apikey" widget="password"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- JiraSettings form view -->
+    <record id="jira_settings_form_view" model="ir.ui.view">
+      <field name="name">jira.settings.form</field>
+      <field name="model">jira.settings</field>
+      <field name="arch" type="xml">
+        <form>
+          <header>
+            <button name="jira_settings_test_connection" type="object" string="Test Connection" class="oe_highlight"/>
+          </header>
+          <sheet>
+            <group>
+              <field name="jira_url"/>
+              <field name="jira_user"/>
+              <field name="jira_apikey" widget="password"/>
+              <field name="message" readonly="1"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- JiraSettings action -->
+    <record id="jira_settings_action" model="ir.actions.act_window">
+      <field name="name">Jira Settings</field>
+      <field name="res_model">jira.settings</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          Click on the create button to add Jira Settings
+        </p>
+      </field>
+    </record>
+
+    <!-- JiraSettings menu item -->
+    <menuitem id="jira_settings_menu" name="Jira Settings" parent="project.menu_main_pm" sequence="10"/>
+    <menuitem id="jira_settings_menu_item" name="Jira Settings" parent="jira_settings_menu" action="jira_settings_action"/>
+  
+  </data>
+</odoo>
